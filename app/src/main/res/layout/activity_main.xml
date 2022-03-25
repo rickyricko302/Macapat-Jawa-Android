@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/parent"
+        android:layout_height="match_parent" app:layoutDescription="@xml/activity_main_scene2">
+
+    <View android:layout_width="0dp" android:layout_height="260dp"
+          android:background="#B88f57" android:id="@+id/view" app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_height="230dp" app:srcCompat="@drawable/gunungan" android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="Sugeng Rawuh,"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            android:layout_margin="20sp"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="Tembang macapat yaiku puisi tradisional Jawa sing nyritakake tahapan panguripane manungsa.\nFilosofi kasebut nggambarake manungsa wiwit lair, sinau nalika bocah, wis diwasa, lan pungkasane bakal mati."
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintBottom_toTopOf="@+id/imageView2"
+    />
+    <ImageView android:layout_width="60dp" android:layout_height="60dp"
+               android:src="@drawable/boyjawa"
+               android:padding="3dp"
+               android:background="@drawable/circle" app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/view"
+               app:layout_constraintTop_toBottomOf="@+id/view" android:id="@+id/imageView2"/>
+    <TextView
+            android:text="Daftar Tembang Macapat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView3"
+            android:textSize="20sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#583510"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/recycler" app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
